@@ -84,6 +84,8 @@ namespace LogMonitor
                     .Where(p => p.IsMatch(item.File))
                     .ToArray();
 
+                Debug.WriteLine("File: " + item.File);
+
                 Debug.WriteLine("Input queue: {0} matching processors.".FormatWith(matchingProcessors.Length));
 
                 IEnumerable<Metric>[] metrics = new IEnumerable<Metric>[matchingProcessors.Length];
